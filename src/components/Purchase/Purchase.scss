@@ -9,25 +9,25 @@ body{
     background-size: cover;
     background-position: bottom center;
     // position: absolute;
-    // min-height: 100vh;
+    min-height: 100vh;
 }
-.hero-banner{
-    position: relative;
-    display: none;
-}
-.hero-wrapper {
-    // display: none !important;
-    background: none;
-}
-.hero-image{
-    display: none;
-}
+// .hero-banner{
+//     position: relative;
+//     display: none;
+// }
+// .hero-wrapper {
+//     // display: none !important;
+//     background: none;
+// }
+// .hero-image{
+//     display: none;
+// }
 
 .bg {
     background-color:transparent;
     cursor: pointer;
-    position: absolute;
-    top: 80px;
+    // position: absolute;
+    // top: 80px;
     
 }
 .demo h4{

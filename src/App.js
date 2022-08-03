@@ -27,7 +27,10 @@ function App() {
       </Layout>
       <Routes>
         <Route path="/purchase" element={<Purchase />}></Route>
-        <Route path="/payment-integration-panel" element={<PayIntPanel />}></Route>
+        <Route
+          path="/payment-integration-panel"
+          element={<PayIntPanel />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );

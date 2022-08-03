@@ -13,11 +13,7 @@ const HeroBanner = () => {
           Claim, Own and Manage Fanclubs, choose <br /> from 250 clubs spread
           across 5 Major leagues
         </p>
-        <Link
-          exact
-          to="/connect-wallet"
-          className="btn btn-primary hero-btn"
-        >
+        <Link exact to="/connect-wallet" className="btn btn-primary hero-btn">
           Connect Wallet To Begin
         </Link>
       </div>
