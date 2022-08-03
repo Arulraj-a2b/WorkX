@@ -240,7 +240,7 @@ const Purchase = (props) => {
                   className=" pkB  text-light px-lg-4 text-decoration-none" style={{marginLeft:"24px"}}
                 >
                   {" "}
-                  Select Package
+                 <p>Select Package</p> 
                 </a></option></select>
               </div>
               <div className="col-lg-2 col-sm-3 mx-5  my-3   center ">
@@ -281,9 +281,9 @@ const Purchase = (props) => {
               Buy Now
             </Link>{" "}
             {/* <select value={selectedClient} onChange={handleSelectChange}> //set value here */}
-            <option value="one">One</option>
+            {/* <option value="one">One</option>
             <option value="two">Two</option>
-            <option value="three">Three</option>
+            <option value="three">Three</option> */}
         {/* </select> */}
           </div>
         </div>
