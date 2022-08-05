@@ -8,6 +8,7 @@
     url('../src/assets/fonts/acumin-pro-condensed-black-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  letter-spacing: normal !important;
 }
 
 /* Global css starts */
@@ -232,7 +233,7 @@ body {
 
 // Fan Club css start
 .fan__container h2 {
-  font-family: 'Acumin Pro Condensed';
+  font-family: 'acumin_pro_condensed_blackRg';
   font-style: normal;
   font-weight: 900;
   font-size: 35px;
@@ -240,8 +241,7 @@ body {
   color: #EBF243;
   flex: none;
   order: 0;
-  flex-grow: 0;
-  letter-spacing: -2px;
+  flex-grow: 0;  
 }
 
 .fan__container p {

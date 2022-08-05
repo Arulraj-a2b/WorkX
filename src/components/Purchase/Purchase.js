@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./Purchase.scss"
+import "./Purchase.scss";
 import { Link } from "react-router-dom";
 import DoneIcon from "@mui/icons-material/Done";
 import Text3 from "../../assets/images/text3.png";
@@ -8,22 +8,26 @@ import Col1 from "../../assets/images/col1.png";
 import Col2 from "../../assets/images/col2.png";
 import Col3 from "../../assets/images/col3.png";
 import Col4 from "../../assets/images/col4.png";
+import Header from "../Layout/Header";
+import SvgCircule from "../../icons/SvgCircule";
 // import Graphic from "../../Assets/images/graphic.png";
-const Purchase = (props) => {
-  const [selectedClient,setSelectedClient] = useState([]);
 
-    function handleSelectChange(event) {
-        setSelectedClient(event.target.value);
-    }
+const Purchase = (props) => {
+  const [selectedClient, setSelectedClient] = useState([]);
+
+  function handleSelectChange(event) {
+    setSelectedClient(event.target.value);
+  }
   return (
     <div>
+      <Header />
       <div className="container-fluid bg pttr">
         <div className="row graphic">
           <div className="col-lg-10 offset-2 my-5 ">
             <img src={Text3} className="img-fluid" alt="" />
           </div>
         </div>
-        <div className="row graphic">
+        <div className="row graphic" style={{ margin: "3rem" }}>
           <div
             className="col-lg-10 offset-2"
             style={{
@@ -33,16 +37,17 @@ const Purchase = (props) => {
             }}
           >
             <div className="row ">
+              <div style={{ width: "15%", marginRight: 50 }}></div>
               <div
-                className="col-lg-2 col-sm-4 my-2 mx-5 bor textC"
-                style={{ width: "15rem" }}
+                className="col-lg-2 col-sm-4 my-2  bor textC"
+                style={{ width: "20%" }}
               >
                 <img src={Col1} alt="" className="hl" />
-                <h1 className="text-white mt-4">
+                <h1 className="text-white mt-4 acuminfont">
                   <b> BASIC</b>
                 </h1>{" "}
                 <hr className="text-light" />
-                <h3 className="yellow">$100</h3>
+                <h3 className="yellow acuminfont">$100</h3>
                 <p className="yl ylcolor">
                   GET AN EARLY <br />
                   BIRD BONUS
@@ -54,15 +59,15 @@ const Purchase = (props) => {
                 </p>
               </div>
               <div
-                className="col-lg-2 col-sm-4 mx-5 my-2 bor textC"
-                style={{ width: "15rem" }}
+                className="col-lg-2 col-sm-4  my-2 bor textC"
+                style={{ width: "20%" }}
               >
                 <img src={Col2} alt="" className="hlC2 pt-3" />
-                <h1 className="text-white mt-5">
+                <h1 className="text-white mt-5 acuminfont">
                   <b> PRO</b>
                 </h1>{" "}
                 <hr className="text-light" />
-                <h3 className="yellow">$500</h3>
+                <h3 className="yellow acuminfont">$500</h3>
                 <p className="yl ylcolor">
                   GET AN EARLY <br />
                   BIRD BONUS
@@ -74,15 +79,15 @@ const Purchase = (props) => {
                 </p>
               </div>
               <div
-                className="col-lg-2 col-sm-4 mx-5 my-2 bor textC"
-                style={{ width: "15rem" }}
+                className="col-lg-2 col-sm-4  my-2 bor textC"
+                style={{ width: "20%" }}
               >
                 <img src={Col3} alt="" className="hl" />
-                <h1 className="text-white mt-4">
+                <h1 className="text-white mt-4 acuminfont">
                   <b> ELITE</b>
                 </h1>{" "}
                 <hr className="text-light" />
-                <h3 className="yellow">$1000</h3>
+                <h3 className="yellow acuminfont">$1000</h3>
                 <p className="yl ylcolor">
                   GET AN EARLY <br />
                   BIRD BONUS
@@ -94,15 +99,15 @@ const Purchase = (props) => {
                 </p>
               </div>
               <div
-                className="col-lg-2 col-sm-4 mx-5 my-2 bor textC"
-                style={{ width: "15rem" }}
+                className="col-lg-2 col-sm-4  my-2 bor textC"
+                style={{ width: "20%" }}
               >
                 <img src={Col4} alt="" className="hlC mt-4" />
-                <h3 className="text-white mt-5">
+                <h3 className="text-white mt-5 acuminfont">
                   <b> LEGENDERY</b>
                 </h3>{" "}
                 <hr className="text-light" />
-                <h3 className="yellow">$2500</h3>
+                <h3 className="yellow acuminfont">$2500</h3>
                 <p className="yl ylcolor">
                   GET AN EARLY <br />
                   BIRD BONUS
@@ -124,19 +129,19 @@ const Purchase = (props) => {
               <thead>
                 <tr className="text-center">
                   <th scope="col"> </th>
-                  <th scope="col" className="yellow display-5">
+                  <th scope="col" className="yellow display-5 acuminfont">
                     {" "}
                     <b> BASIC</b>
                   </th>
-                  <th scope="col" className="yellow display-5">
+                  <th scope="col" className="yellow display-5 acuminfont">
                     {" "}
                     <b> PRO</b>
                   </th>
-                  <th scope="col" className="yellow display-5">
+                  <th scope="col" className="yellow display-5  acuminfont">
                     {" "}
                     <b> ELITE*</b>
                   </th>
-                  <th scope="col" className="yellow display-5">
+                  <th scope="col" className="yellow display-5 acuminfont">
                     {" "}
                     <b> LEGENDERY*</b>
                   </th>
@@ -144,84 +149,111 @@ const Purchase = (props) => {
               </thead>
               <tbody style={{ borderColor: "#A93BFF" }}>
                 <tr>
-                  <th scope="row ps" style={{width:"14rem"}}>
+                  <th scope="row ps" style={{ width: "20%" }}>
                     PRICE IN <br /> USD
                   </th>
-                  <td className="ps ">$100</td>
-                  <td className="ps " style={{width:"16rem"}}>$500</td>
-                  <td className="ps ">$1000</td>
-                  <td className="ps" style={{width:"12rem"}}>$2500</td>
+                  <td className="ps " style={{ width: "20%" }}>
+                    $100
+                  </td>
+                  <td className="ps " style={{ width: "20%" }}>
+                    $500
+                  </td>
+                  <td className="ps " style={{ width: "20%" }}>
+                    $1000
+                  </td>
+                  <td className="ps" style={{ width: "20%" }}>
+                    $2500
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row ps ">
+                  <th scope="row ps " style={{ width: "20%" }}>
                     Discount <br /> during campaign{" "}
                   </th>
-                  <td className="ps ">N/A</td>
-                  <td className="ps ">5%</td>
-                  <td className="ps ">10%</td>
-                  <td className="ps ">15%</td>
+                  <td style={{ width: "20%" }} className="ps ">
+                    N/A
+                  </td>
+                  <td style={{ width: "20%" }} className="ps ">
+                    5%
+                  </td>
+                  <td style={{ width: "20%" }} className="ps ">
+                    10%
+                  </td>
+                  <td style={{ width: "20%" }} className="ps ">
+                    15%
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row ps">
+                  <th scope="row ps" style={{ width: "20%" }}>
                     TOKEN VALUE DUE <br /> TO 2X DEAL{" "}
                   </th>
-                  <td className="ps ">---</td>
-                  <td className="ps ">---</td>
-                  <td className="ps ">2000</td>
-                  <td className="ps ">5000</td>
+                  <td className="ps " style={{ width: "20%" }}>
+                    ---
+                  </td>
+                  <td className="ps " style={{ width: "20%" }}>
+                    ---
+                  </td>
+                  <td className="ps " style={{ width: "20%" }}>
+                    2000
+                  </td>
+                  <td className="ps " style={{ width: "20%" }}>
+                    5000
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row">
+                  <th scope="row" style={{ width: "20%" }}>
                     SIGN UP <br /> BONUS{" "}
                   </th>
-                  <td>---</td>
-                  <td>---</td>
-                  <td>---</td>
-                  <td>---</td>
+                  <td style={{ width: "20%" }}>---</td>
+                  <td style={{ width: "20%" }}>---</td>
+                  <td v>---</td>
+                  <td style={{ width: "20%" }}>---</td>
                 </tr>
                 <tr>
-                  <th scope="row">
+                  <th scope="row" style={{ width: "20%" }}>
                     MEMBERSHIP <br />
                     BONUS{" "}
                   </th>
-                  <td>
+                  <td style={{ width: "20%" }}>
                     <DoneIcon />
                   </td>
-                  <td>
+                  <td style={{ width: "20%" }}>
                     <DoneIcon />
                   </td>
-                  <td>
+                  <td style={{ width: "20%" }}>
                     <DoneIcon />
                   </td>
-                  <td>
+                  <td style={{ width: "20%" }}>
                     <DoneIcon />
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">
+                  <th style={{ width: "20%" }} scope="row">
                     BEGINNER'S <br />
                     LUCK BONUS{" "}
                   </th>
-                  <td>---</td>
-                  <td>---</td>
-                  <td>---</td>
-                  <td>---</td>
+                  <td style={{ width: "20%" }}>---</td>
+                  <td style={{ width: "20%" }}>---</td>
+                  <td style={{ width: "20%" }}>---</td>
+                  <td style={{ width: "20%" }}>---</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ borderColor: "#A93BFF" }}>
+                  <th
+                    scope="row"
+                    style={{ borderColor: "#A93BFF", width: "20%" }}
+                  >
                     EARLY <br />
                     BIRD BONUS{" "}
                   </th>
-                  <td>
+                  <td style={{ width: "20%" }}>
                     <DoneIcon />
                   </td>
-                  <td>
+                  <td style={{ width: "20%" }}>
                     <DoneIcon />
                   </td>
-                  <td>
+                  <td style={{ width: "20%" }}>
                     <DoneIcon />
                   </td>
-                  <td>
+                  <td style={{ width: "20%" }}>
                     <DoneIcon />
                   </td>
                 </tr>
@@ -230,21 +262,58 @@ const Purchase = (props) => {
           </div>
         </div>
 
-        <div className="row my-3">
-          <div className="col-lg-10 offset-2">
-            <div className="row " style={{ marginBottom: "5.5rem" }}>
-              <div className="col-lg-2 col-sm-3 mx-5  my-3   center " style={{marginLeft:"4rem"}}>
-              <select value={selectedClient} onChange={handleSelectChange}>
-              <option value="one"><a
+        <div className="row my-3" style={{width:'100%'}}>
+          <div className="col-lg-10" style={{width:'100%'}}>
+            <div
+              className="row "
+              style={{
+                marginBottom: "5.5rem",
+                marginRight: "3rem",
+                marginLeft: "3rem",
+                width:'100%'
+              }}
+              
+            >
+              <div style={{ width: "20%" }} />
+              <div
+                style={{ width: "20%" }}
+                className="col-lg-2 col-sm-3  my-3   center "
+              >
+                <a
                   href=""
-                  className=" pkB  text-light px-lg-4 text-decoration-none" style={{marginLeft:"24px"}}
+                  className=" pkB  text-light  px-lg-4 text-decoration-none"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    height: 44,
+                    borderColor: "#EBF243",
+                  }}
+                >
+                  <div style={{ marginRight: 8 }}>
+                    <SvgCircule />
+                  </div>
+                  Select Package
+                </a>
+              </div>
+              <div
+                style={{ width: "20%" }}
+                className="col-lg-2 col-sm-3  my-3   center "
+              >
+                <a
+                  href=""
+                  className=" pkB  text-light  px-lg-4 text-decoration-none"
+                  style={{ display: "flex", alignItems: "center", height: 44 }}
                 >
                   {" "}
-                 <p>Select Package</p> 
-                </a></option></select>
+                  Select Package
+                </a>
               </div>
-              <div className="col-lg-2 col-sm-3 mx-5  my-3   center ">
+              <div
+                style={{ width: "20%" }}
+                className="col-lg-2 col-sm-3  my-3   center "
+              >
                 <a
+                  style={{ display: "flex", alignItems: "center", height: 44 }}
                   href=""
                   className=" pkB  text-light  px-lg-4 text-decoration-none"
                 >
@@ -252,17 +321,12 @@ const Purchase = (props) => {
                   Select Package
                 </a>
               </div>
-              <div className="col-lg-2 col-sm-3 mx-5  my-3   center ">
+              <div
+                style={{ width: "20%" }}
+                className="col-lg-2 col-sm-3  my-3   center "
+              >
                 <a
-                  href=""
-                  className=" pkB  text-light  px-lg-4 text-decoration-none"
-                >
-                  {" "}
-                  Select Package
-                </a>
-              </div>
-              <div className="col-lg-2 col-sm-3 mx-5  my-3   center ">
-                <a
+                  style={{ display: "flex", alignItems: "center", height: 44 }}
                   href=""
                   className=" pkB  text-light  px-lg-4 text-decoration-none"
                 >
@@ -284,12 +348,12 @@ const Purchase = (props) => {
             {/* <option value="one">One</option>
             <option value="two">Two</option>
             <option value="three">Three</option> */}
-        {/* </select> */}
+            {/* </select> */}
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Purchase
+export default Purchase;

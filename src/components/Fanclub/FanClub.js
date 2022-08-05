@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Col } from "react-bootstrap";
+import Layout from "../Layout/Layout";
 const FanClub = () => {
   return (
+    <Layout>
     <Col lg={5}>
       <div className="fan__container">
         <h2>SELECT A FAN CLUB</h2>
@@ -35,6 +37,7 @@ const FanClub = () => {
       <br />
       <div className="con__btn" > <Link to="/purchase" className="esf" style={{textDecoration:"none",color:"white"}}> Continue</Link> </div>
     </Col>
+    </Layout>
   );
 };
 

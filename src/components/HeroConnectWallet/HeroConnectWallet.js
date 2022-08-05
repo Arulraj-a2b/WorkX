@@ -2,9 +2,11 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import svg from "../../assets/keplr-logo.svg";
+import Layout from "../Layout/Layout";
 
 const HeroConnectWallet = () => {
   return (
+    <Layout>
     <Col lg={5}>
       <div className="hero-content">
         <h1 className="hero-title">Connet Wallet</h1>
@@ -115,6 +117,7 @@ const HeroConnectWallet = () => {
         </div>
       </div>
     </Col>
+    </Layout>
   );
 };
 

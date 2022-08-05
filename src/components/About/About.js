@@ -1,5 +1,8 @@
+import Layout from "../Layout/Layout";
+
 const About = () => {
     return (
+      <Layout>
       <body >
         <input type="hidden" id="anPageName" name="page" value="fanfury-web-experience-visual-aesthetic-1" />
         <div className="container-center-horizontal">
@@ -374,6 +377,7 @@ const About = () => {
           </div>
         </div>
       </body>
+      </Layout>
     );
   }
   
