@@ -13,13 +13,13 @@ import SvgCircule from "../../icons/SvgCircule";
 // import Graphic from "../../Assets/images/graphic.png";
 
 const Purchase = (props) => {
-  const [selectedClient, setSelectedClient] = useState([]);
+  const [selectedClient, setSelectedClient] = useState("1");
 
-  function handleSelectChange(event) {
-    setSelectedClient(event.target.value);
-  }
+  const handleSelectChange = (value) => {
+    setSelectedClient(value);
+  };
   return (
-    <div>
+    <div className="overAll">
       <Header />
       <div className="container-fluid bg pttr">
         <div className="row graphic">
@@ -262,83 +262,116 @@ const Purchase = (props) => {
           </div>
         </div>
 
-        <div className="row my-3" style={{width:'100%'}}>
-          <div className="col-lg-10" style={{width:'100%'}}>
+        <div className="row my-3" style={{ width: "100%" }}>
+          <div className="col-lg-10" style={{ width: "100%" }}>
             <div
               className="row "
               style={{
                 marginBottom: "5.5rem",
                 marginRight: "3rem",
                 marginLeft: "3rem",
-                width:'100%'
+                width: "100%",
               }}
-              
             >
               <div style={{ width: "20%" }} />
               <div
                 style={{ width: "20%" }}
                 className="col-lg-2 col-sm-3  my-3   center "
               >
-                <a
-                  href=""
+                <div
+                  onClick={() => handleSelectChange("1")}
                   className=" pkB  text-light  px-lg-4 text-decoration-none"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     height: 44,
-                    borderColor: "#EBF243",
+                    borderColor: selectedClient === "1" ? "#EBF243" : "#fff",
+                    justifyContent: "center",
                   }}
                 >
-                  <div style={{ marginRight: 8 }}>
-                    <SvgCircule />
-                  </div>
+                  {selectedClient === "1" && (
+                    <div style={{ marginRight: 8 }}>
+                      <SvgCircule />
+                    </div>
+                  )}
                   Select Package
-                </a>
+                </div>
+              </div>
+
+              <div
+                style={{ width: "20%" }}
+                className="col-lg-2 col-sm-3  my-3   center "
+              >
+                <div
+                  onClick={() => handleSelectChange("2")}
+                  className=" pkB  text-light  px-lg-4 text-decoration-none"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    height: 44,
+                    borderColor: selectedClient === "2" ? "#EBF243" : "#fff",
+                    justifyContent: "center",
+                  }}
+                >
+                  {selectedClient === "2" && (
+                    <div style={{ marginRight: 8 }}>
+                      <SvgCircule />
+                    </div>
+                  )}
+                  Select Package
+                </div>
               </div>
               <div
                 style={{ width: "20%" }}
                 className="col-lg-2 col-sm-3  my-3   center "
               >
-                <a
-                  href=""
+                <div
+                  onClick={() => handleSelectChange("3")}
                   className=" pkB  text-light  px-lg-4 text-decoration-none"
-                  style={{ display: "flex", alignItems: "center", height: 44 }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    height: 44,
+                    borderColor: selectedClient === "3" ? "#EBF243" : "#fff",
+                    justifyContent: "center",
+                  }}
                 >
-                  {" "}
+                  {selectedClient === "3" && (
+                    <div style={{ marginRight: 8 }}>
+                      <SvgCircule />
+                    </div>
+                  )}
                   Select Package
-                </a>
+                </div>
               </div>
               <div
                 style={{ width: "20%" }}
                 className="col-lg-2 col-sm-3  my-3   center "
               >
-                <a
-                  style={{ display: "flex", alignItems: "center", height: 44 }}
-                  href=""
+                <div
+                  onClick={() => handleSelectChange("4")}
                   className=" pkB  text-light  px-lg-4 text-decoration-none"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    height: 44,
+                    borderColor: selectedClient === "4" ? "#EBF243" : "#fff",
+                    justifyContent: "center",
+                  }}
                 >
-                  {" "}
+                  {selectedClient === "4" && (
+                    <div style={{ marginRight: 8 }}>
+                      <SvgCircule />
+                    </div>
+                  )}
                   Select Package
-                </a>
-              </div>
-              <div
-                style={{ width: "20%" }}
-                className="col-lg-2 col-sm-3  my-3   center "
-              >
-                <a
-                  style={{ display: "flex", alignItems: "center", height: 44 }}
-                  href=""
-                  className=" pkB  text-light  px-lg-4 text-decoration-none"
-                >
-                  {" "}
-                  Select Package
-                </a>
+                </div>
               </div>
             </div>
           </div>
           <div className="btn-buy" style={{ width: "25rem" }}>
             <Link
-              to="/step3"
+              to="/payment-integration-panel"
               className="esf"
               style={{ textDecoration: "none", color: "white" }}
             >
